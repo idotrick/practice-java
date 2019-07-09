@@ -18,21 +18,43 @@ public class Fibonacci {
   }
 
   public static void printFibSeriesUpTo(int n) {
-    System.out.println("Printing Fibonacci Series Up to " + n);
-
     List<Integer> fibSeries = new LinkedList<>();
-    for(int i=1;i<=n;i++) {
-      fibSeries.add(fib(i));
-    }
 
-    System.out.print(fibSeries);
+    System.out.println("Printing Fibonacci Series using recursion upto " + n);
+    for(int i=1;i<=n;i++) {
+      fibSeries.add(fibonacciRecursion(i));
+    }
+    System.out.println(fibSeries);
+    fibSeries.clear();
+
+    System.out.println("Printing Fibonacci Series using iteration upto " + n);
+    for(int i=1;i<=n;i++) {
+      fibSeries.add(fibonacciIteration(i));
+    }
+    System.out.println(fibSeries);
   }
 
-  public static int fib(int n) {
-    if(n==1 || n==2) {
+  // Return nth fibonacci using tail recursion
+  public static int fibonacciRecursion(int n) {
+    if(n==1 || n==2)
       return 1;
-    } else {
-      return fib(n-1) + fib(n-2);
+    else
+      return fibonacciRecursion(n-1) + fibonacciRecursion(n-2);
+  }
+
+  // Return nth fibonacci using iteration
+  public static int fibonacciIteration(int n) {
+    if(n==1 || n==2)
+      return 1;
+
+    int fib1=1, fib2=1, fibonacci=-1;
+
+    for(int i=3;i<=n;i++) {
+      fibonacci = fib1 + fib2;
+      fib1 = fib2;
+      fib2 = fibonacci;
     }
+
+    return fibonacci;
   }
 }
