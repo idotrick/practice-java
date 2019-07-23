@@ -6,6 +6,8 @@
  * solution using caching and memoization.
  */
 
+package main.java.algorithm;
+
 import java.util.*;
 
 public class Fibonacci {

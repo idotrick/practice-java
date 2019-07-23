@@ -1,4 +1,4 @@
- /*
+package main.java.util; /*
   * This program shows how to take input from console to the java program.
   * There are 3 ways to take input.
   *   1. java.io.BufferredReader

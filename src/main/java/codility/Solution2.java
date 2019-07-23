@@ -1,0 +1,41 @@
+package main.java.codility;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class Solution2 {
+    int solution(int n) {
+        int[] d = new int[30];
+        int l = 0;
+        int p;
+        while (n > 0) {
+            d[l] = n % 2;
+            n /= 2;
+            l++;
+        }
+        for (p = 1; p <= (1 + l)/2; ++p) {
+            int i;
+            boolean ok = true;
+            for (i = 0; i < l - p; ++i) {
+                if (d[i] != d[i + p]) {
+                    ok = false;
+                    break;
+                }
+            }
+            if (ok) {
+                return p;
+            }
+        }
+        return -1;
+    }
+
+    @Test
+    public void test1() {
+        int expected, actual;
+        int input = 955;
+        expected = 4;
+        actual = new Solution2().solution(input);
+        assertEquals(expected, actual);
+    }
+}
