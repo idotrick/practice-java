@@ -1,5 +1,5 @@
 /**
- * Problem Copied from: https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem
+ * Problem Copied from: @see <a href="https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem">HackerRank - Climbing the Leaderboard Problem</a>
  *
  * Alice is playing an arcade game and wants to climb to the top of the leaderboard and wants to track her ranking. The game uses Dense Ranking, so its leaderboard works like this:
  *
