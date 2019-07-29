@@ -1,4 +1,6 @@
 /**
+ * Problem Copied from: https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem
+ *
  * Alice is playing an arcade game and wants to climb to the top of the leaderboard and wants to track her ranking. The game uses Dense Ranking, so its leaderboard works like this:
  *
  *  - The player with the highest score is ranked number 1 on the leaderboard.
