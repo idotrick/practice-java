@@ -1,4 +1,4 @@
-package main.java.codility;
+package codility;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -8,7 +8,7 @@ public class Solution3Recursion {
     Set<Integer> onSet = new HashSet<>();
     Set<Integer> shiningSet = new HashSet<>();
 
-    int solution(int[] A){
+    public int solution(int[] A){
         if(!isValidInput(A)){
             return 0;
         }

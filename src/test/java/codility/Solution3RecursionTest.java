@@ -1,5 +1,6 @@
-package main.java.codility;
+package test.java.codility;
 
+import main.java.codility.Solution3Recursion;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

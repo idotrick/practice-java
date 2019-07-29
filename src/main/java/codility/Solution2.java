@@ -1,11 +1,7 @@
-package main.java.codility;
-
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+package codility;
 
 public class Solution2 {
-    int solution(int n) {
+    public int solution(int n) {
         int[] d = new int[30];
         int l = 0;
         int p;
@@ -28,14 +24,5 @@ public class Solution2 {
             }
         }
         return -1;
-    }
-
-    @Test
-    public void test1() {
-        int expected, actual;
-        int input = 955;
-        expected = 4;
-        actual = new Solution2().solution(input);
-        assertEquals(expected, actual);
     }
 }

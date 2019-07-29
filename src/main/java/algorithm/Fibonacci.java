@@ -6,7 +6,7 @@
  * solution using caching and memoization.
  */
 
-package main.java.algorithm;
+package algorithm;
 
 import java.util.*;
 

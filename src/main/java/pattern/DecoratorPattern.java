@@ -1,4 +1,4 @@
-package main.java.pattern;
+package pattern;
 
 import java.util.logging.Logger;
 

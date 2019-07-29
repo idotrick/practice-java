@@ -1,4 +1,4 @@
-package main.java.corejava;
+package corejava;
 
 import java.util.Calendar;
 import java.util.concurrent.*;
