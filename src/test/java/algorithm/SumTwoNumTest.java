@@ -1,6 +1,5 @@
-package test.java.algorithm;
+package algorithm;
 
-import algorithm.SumTwoNum;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

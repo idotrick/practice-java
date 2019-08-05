@@ -1,6 +1,5 @@
-package test.java.codility;
+package codility;
 
-import main.java.codility.Solution2;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
