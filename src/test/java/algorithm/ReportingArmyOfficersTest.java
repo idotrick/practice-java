@@ -34,6 +34,15 @@ public class ReportingArmyOfficersTest {
   }
 
   @Test
+  @DisplayName("TestCase: {1,4,6,8} expected: 0")
+  void noOfficer(){
+    int[] testCase = new int[]{1,4,6,8};
+    int expected = 0;
+    int actual = testObject.solution(testCase);
+    Assertions.assertEquals(expected, actual);
+  }
+
+  @Test
   @DisplayName("TestCase: {3, 4, 3, 0, 2, 2, 3, 0, 0} expected: 5")
   void validSmall(){
     int[] testCase = new int[]{3, 4, 3, 0, 2, 2, 3, 0, 0};
