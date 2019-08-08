@@ -1,4 +1,5 @@
 /**
+ * Company: Grab
  * Problem: Rank of army officers given in an array. Ex {3, 4, 3, 0, 2, 2, 3, 0, 0}. Any officer can report to a
  * superior officer with exactly one rank above his rank. multiple officers can report to same superior officer.
  * <p>
