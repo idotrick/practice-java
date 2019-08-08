@@ -14,6 +14,11 @@
  * 3. Given A = {1,2,1,2,..., 1,2} of length 20,000, the function should return true.
  * <p>
  * Solution:
+ * - Calculate : totalLoad
+ * - Identify set of loads from which load balancer can pick : balancerLoadSetArray[]
+ * - Pick two loads from balancerLoadSetArray[] at a time and sum : balancerLoad
+ * - If ((totalLoad - balancerLoad) % 3 == 0) then return true
+ * - If never return, return false
  */
 
 package algorithm;
@@ -30,17 +35,17 @@ public class LoadBalancer {
     }
 
     int totalLoad = 0;
-    Set<Integer> uniqueBalancerLoadSet = new HashSet<>();
+    Set<Integer> balancerLoadSet = new HashSet<>(); // loads from which load balancer can pick
 
     for (int i = 0; i < A.length; i++) {
       totalLoad += A[i];
-      uniqueBalancerLoadSet.add(A[i]);
+      balancerLoadSet.add(A[i]);
     }
 
-    Object[] uniqueBalancerLoadSetArray = uniqueBalancerLoadSet.toArray();
-    for (int i = 0; i < uniqueBalancerLoadSetArray.length; i++) {
-      for (int j = 1; j < uniqueBalancerLoadSetArray.length; j++) {
-        int balancerLoad = (Integer) uniqueBalancerLoadSetArray[i] + (Integer) uniqueBalancerLoadSetArray[j];
+    Integer[] balancerLoadSetArray = balancerLoadSet.toArray(new Integer[balancerLoadSet.size()]);
+    for (int i = 0; i < balancerLoadSetArray.length; i++) {
+      for (int j = 1; j < balancerLoadSetArray.length; j++) {
+        int balancerLoad = balancerLoadSetArray[i] + balancerLoadSetArray[j];
         if ((totalLoad - balancerLoad) % 3 == 0) {
           return true;
         }
