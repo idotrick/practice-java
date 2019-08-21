@@ -1,5 +1,5 @@
 /**
- * Given an array of strings as input, write a function to return longest prefix common to all of its elements.
+ * Given an array of strings as input, write a function to return longest common prefix to all of its elements.
  */
 package algorithm;
 
