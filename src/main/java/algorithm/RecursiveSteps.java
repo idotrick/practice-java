@@ -10,13 +10,14 @@ import java.util.regex.*;
 
 public class RecursiveSteps {
 
-    private static Map<Integer,Integer> permsMap= new HashMap<>();
-    private static Map<Integer,Integer> resultMap= new LinkedHashMap<>();
+    private static Map<Integer, Integer> permsMap = new HashMap<>();
+    private static Map<Integer, Integer> resultMap = new LinkedHashMap<>();
+
     // Complete the stepPerms function below.
     static int stepPerms(int n) {
 
-        if(!permsMap.containsKey(n)) {
-            permsMap.put(n, stepPerms(n-1)+stepPerms(n-2)+stepPerms(n-3));
+        if (!permsMap.containsKey(n)) {
+            permsMap.put(n, stepPerms(n - 1) + stepPerms(n - 2) + stepPerms(n - 3));
         }
 
         return permsMap.get(n);
@@ -33,15 +34,15 @@ public class RecursiveSteps {
             scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
             permsMap.clear();
-            permsMap.put(1,1);
-            permsMap.put(2,2);
-            permsMap.put(3,4);
+            permsMap.put(1, 1);
+            permsMap.put(2, 2);
+            permsMap.put(3, 4);
             int res = stepPerms(n);
 
-            resultMap.put(n,res);
+            resultMap.put(n, res);
         }
 
-        System.out.println("output: "+resultMap);
+        System.out.println("output: " + resultMap);
 
         scanner.close();
     }
