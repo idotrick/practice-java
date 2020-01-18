@@ -9,7 +9,7 @@ interface IComponent {
 class ConcreteComponent implements IComponent {
     @Override
     public void operation() {
-        Logger.getGlobal().info(ConcreteComponent.class.getName()+": operation()");
+        Logger.getGlobal().info(ConcreteComponent.class.getName() + ": operation()");
     }
 }
 
@@ -41,12 +41,12 @@ class ConcreteDecorator extends Decorator {
     }
 
     void preOperation() {
-        Logger.getGlobal().info(ConcreteDecorator.class.getName()+": preOperation");
+        Logger.getGlobal().info(ConcreteDecorator.class.getName() + ": preOperation");
     }
 
 
     void postOperation() {
-        Logger.getGlobal().info(ConcreteDecorator.class.getName()+": postOperation");
+        Logger.getGlobal().info(ConcreteDecorator.class.getName() + ": postOperation");
     }
 }
 
