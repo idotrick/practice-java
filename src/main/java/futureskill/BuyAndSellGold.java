@@ -12,24 +12,32 @@ public class BuyAndSellGold {
     void t1(){
         API api = new API(List.of(1, 2, 3));
         Solution solution = new Solution(api);
-        assertEquals(solution.getBuyDay(),0);
-        assertEquals(solution.getSellDay(),2);
+        assertEquals(0,solution.getBuyDay());
+        assertEquals(2,solution.getSellDay());
     }
 
     @Test
     void t2(){
         API api = new API(List.of(1, 2, 1));
         Solution solution = new Solution(api);
-        assertEquals(solution.getBuyDay(),0);
-        assertEquals(solution.getSellDay(),1);
+        assertEquals(0,solution.getBuyDay());
+        assertEquals(1,solution.getSellDay());
     }
 
     @Test
     void t3(){
         API api = new API(new ArrayList<>());
         Solution solution = new Solution(api);
-        assertEquals(solution.getBuyDay(),0);
-        assertEquals(solution.getSellDay(),0);
+        assertEquals(0,solution.getBuyDay());
+        assertEquals(0,solution.getSellDay());
+    }
+
+    @Test
+    void t4(){
+        API api = new API(List.of(7,12,2,5,3,6,10,11,9,2));
+        Solution solution = new Solution(api);
+        assertEquals(2,solution.getBuyDay());
+        assertEquals(7,solution.getSellDay());
     }
 }
 
