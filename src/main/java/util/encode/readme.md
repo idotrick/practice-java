@@ -1,11 +1,11 @@
-#Exercise
+# Exercise
 
-##Problem:
+## Problem:
 
 Write a function to decode an octal string to a number in an array of bytes. For example,
 "31646541" should produce [103, 77, 97].
 
-###Optional
+### Optional
 To increase the challenge, consider the following:
 1. Write the corresponding encode function
 2. Add hexadecimal support
